@@ -1,4 +1,5 @@
 export const CONFIG = {
+  APP_URL: process.env.APP_URL!,
   BOT_TOKEN: process.env.BOT_TOKEN!,
   VK_GROUP_ID: process.env.VK_GROUP_ID!,
   VK_CLIENT_ID: process.env.VK_CLIENT_ID!,
