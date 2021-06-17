@@ -10,16 +10,14 @@ import { CONFIG } from './config'
 
 const bot = new Telegraf(CONFIG.BOT_TOKEN)
 
-console.log(CONFIG)
 bot.telegram.setWebhook(`${CONFIG.APP_URL}/bot${CONFIG.BOT_TOKEN}`)
 // @ts-ignore
-bot.startWebhook(`/bot${CONFIG.BOT_TOKEN}`, null, 3000)
+bot.startWebhook(`/bot${CONFIG.BOT_TOKEN}`, null, process.env.PORT || 3000)
 
 bot.command('info', async (ctx) => {
   const {
     response: [group],
   } = await fetchVKGroup()
-  console.log(group)
   const htmlMessage = `
 <b>${group.name}</b> 
 
