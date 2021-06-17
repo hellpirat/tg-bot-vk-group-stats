@@ -21,8 +21,6 @@ bot.command('info', async (ctx) => {
   const htmlMessage = `
 <b>${group.name}</b> 
 
-${group.description}
-
 <b>Колличество подписчиков:</b> <i>${group.members_count}</i>
 `
 
